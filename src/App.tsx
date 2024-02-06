@@ -13,7 +13,7 @@ const App: React.FC = () => {
   return (
     !isAuth
       ? <Auth toggleIsAuth={toggleIsAuth} />
-      : <Content />
+      : <Content toggleIsAuth={toggleIsAuth} />
   )
 }
 

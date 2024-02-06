@@ -9,7 +9,11 @@ import Filter from "./Filter";
 import Table from "./Table";
 import Pagination from "./Pagination";
 
-const Content = () => {
+interface IContentProps {
+  toggleIsAuth: () => void;
+}
+
+const Content: React.FC<IContentProps> = ({toggleIsAuth}) => {
   const [shorterList, setShorterList] = useState<IshortURL[] | []>([]);
   const [sortType, setSortType] = useState<SortType[]>(['desc_counter']);
   const [currentPage, setCurrentPage] = useState(1);
@@ -21,10 +25,15 @@ const Content = () => {
       if (res) setShorterList(res.data), setTotalPage(res.totalCount);
     })();
   }, [currentPage, sortType]);
-  
+
+  const logOut = () => {
+    toggleIsAuth();
+    localStorage.removeItem('token');
+  }
   
   return (
     <div className="content">
+      <span className="logOut" onClick={logOut}>Log out</span>
       <Shorter />
       <Filter setSortType={setSortType} />
       <Table shorterList={shorterList} />
