@@ -1,0 +1,178 @@
+/*
+Common
+*/
+:root {
+  background: linear-gradient(to right, #525252, #3d72b4);
+}
+input {
+  display: block;
+  padding: 7px 10px;
+  border-radius: 10px;
+  margin-bottom: 0.7rem;
+
+  border: none;
+  background-color: #dae5f1ea;
+}
+button {
+  width: 100%;
+  padding: 7px;
+  border-radius: 10px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+
+  border: none;
+  background-color: #839bbbea;
+  color: white;
+}
+button:disabled {
+  opacity: 0.8;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+
+/*
+Auth
+*/
+.auth {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 5px 10px 20px #152130;
+}
+.auth_form {
+  column-gap: 10px;
+}
+.signMode_switcher {
+  display: flex;
+  column-gap: 15px;
+  margin-bottom: 20px;
+}
+.signMode_btn {
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.2s;
+  opacity: 0.8;
+}
+.signMode_btn:hover {
+  opacity: 0.8;
+}
+.active {
+  position: relative;
+  transform: scale(1.05);
+  opacity: 1;
+}
+.active::before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: '';
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #3d72b4;
+}
+
+
+/*
+Content, Table
+*/
+.content {
+  max-width: 80%;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 5px 10px 20px #152130;
+}
+.content td {
+  padding: 10px;
+  background-color: #ececec;
+  max-width: 30ch;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.link_toClipboard {
+  cursor: pointer;
+  transition: 0.2s;
+}
+.link_toClipboard:hover {
+  opacity: 0.8;
+}
+
+
+/*
+Shorter
+*/
+.shorter {
+  display: flex;
+  column-gap: 5px;
+}
+.shorter input {
+  width: 70%;
+}
+.shorter button {
+  width: 30%;
+  height: 100%;
+}
+
+
+/*
+Filter
+*/
+.filter {
+  padding: 15px 5px;
+  text-align: center;
+}
+.filter #options {
+  min-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 2px;
+}
+#options option {
+  padding: 2px;
+}
+#options option:hover {
+  opacity: 0.8;
+}
+
+
+/*
+Pagination
+*/
+.pagination {
+  justify-content: center;
+  display: flex;
+  column-gap: 0.3rem;
+  margin-top: 2rem;
+}
+.pagination_item {
+  padding: 0.4rem;
+  font-size: 13px;
+  border-radius: 4px;
+  color: rgb(87, 87, 87);
+  background-color: rgb(224, 224, 224);
+  transition: 0.2s;
+  cursor: pointer;
+}
+.pagination_item_disabled {
+  opacity: 0.45;
+  pointer-events: none;
+}
+.pagination_item:hover {
+  opacity: 0.8;
+}
+.pagination_item_active {
+  color: white;
+  background-color: rgb(185, 185, 185);
+}
